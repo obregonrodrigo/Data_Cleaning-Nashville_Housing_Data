@@ -127,3 +127,14 @@ SELECT *
 -- DELETE
 FROM RowNumCTE
 WHERE row_num > 1
+
+-- Remoção de colunas não usadas ou duplicadas
+SELECT *
+FROM NashvilleHouses.dbo.NashivilleHousing
+
+ALTER TABLE NashvilleHouses.dbo.NashivilleHousing
+DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress
+
+ALTER TABLE NashvilleHouses.dbo.NashivilleHousing
+DROP COLUMN SaleDate
+
